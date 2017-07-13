@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<StandardTypeEnum>
+    <StandardType Text="兼职职务" Value="兼职职务" />
+    <StandardType Text="政治面貌" Value="政治面貌" />
+    <StandardType Text="员工性质" Value="员工性质" />
+    <StandardType Text="民族" Value="民族" />
+    <StandardType Text="住房情况" Value="住房情况" />
+    <StandardType Text="职称" Value="职称" />
+    <StandardType Text="技能等级" Value="技能等级" />
+    <StandardType Text="学历" Value="学历" />
+    <StandardType Text="学位" Value="学位" />
+    <StandardType Text="团费标准" Value="团费标准" />
+    <StandardType Text="奖励标准" Value="奖励标准" />
+</StandardTypeEnum>

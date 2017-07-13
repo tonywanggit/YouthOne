@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<BudgetApplyStatusEnum>
+    <BudgetApplyStatus Text="审核已通过" Value="审核已通过" />
+    <BudgetApplyStatus Text="审核未通过" Value="审核未通过" />
+</BudgetApplyStatusEnum>

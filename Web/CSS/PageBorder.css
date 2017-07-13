@@ -1,0 +1,8 @@
+﻿td.PageBorder_tlc {background-image:url(../Images/PageBorders/top-left-corner.png);}
+td.PageBorder_blc {background-image:url(../Images/PageBorders/bottom-left-corner.png);}
+td.PageBorder_trc {background-image:url(../Images/PageBorders/top-right-corner.png);}
+td.PageBorder_brc {background-image:url(../Images/PageBorders/bottom-right-corner.png);}
+td.PageBorder_t {background-image:url(../Images/PageBorders/top.png); background-repeat:repeat-x;}
+td.PageBorder_l {background-image:url(../Images/PageBorders/left.png); background-repeat:repeat-y;}
+td.PageBorder_b {background-image:url(../Images/PageBorders/bottom.png); background-repeat:repeat-x;}
+td.PageBorder_r {background-image:url(../Images/PageBorders/right.png); background-repeat:repeat-y;}

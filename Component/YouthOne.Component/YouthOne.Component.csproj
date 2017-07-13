@@ -1,0 +1,384 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{187B74AD-0BB0-41DD-86C9-1C5272AF32B4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>YouthOne.Component</RootNamespace>
+    <AssemblyName>YouthOne.Component</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v9.1.Core">
+      <HintPath>..\..\Web\Bin\DevExpress.Charts.v9.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v9.1">
+      <HintPath>..\..\Web\Bin\DevExpress.Data.v9.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v9.1.Linq">
+      <HintPath>..\..\Web\Bin\DevExpress.Data.v9.1.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Persistent.Base.v9.1">
+      <HintPath>..\..\Web\Bin\DevExpress.Persistent.Base.v9.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Persistent.BaseImpl.v9.1">
+      <HintPath>..\..\Web\Bin\DevExpress.Persistent.BaseImpl.v9.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v9.1">
+      <HintPath>..\..\Web\Bin\DevExpress.Utils.v9.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxEditors.v9.1">
+      <HintPath>..\..\Web\Bin\DevExpress.Web.ASPxEditors.v9.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxGauges.v9.1">
+      <HintPath>..\..\Web\Bin\DevExpress.Web.ASPxGauges.v9.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxGridView.v9.1">
+      <HintPath>..\..\Web\Bin\DevExpress.Web.ASPxGridView.v9.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxGridView.v9.1.Export">
+      <HintPath>..\..\Web\Bin\DevExpress.Web.ASPxGridView.v9.1.Export.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxHtmlEditor.v9.1">
+      <HintPath>..\..\Web\Bin\DevExpress.Web.ASPxHtmlEditor.v9.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxPivotGrid.v9.1">
+      <HintPath>..\..\Web\Bin\DevExpress.Web.ASPxPivotGrid.v9.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxPivotGrid.v9.1.Export">
+      <HintPath>..\..\Web\Bin\DevExpress.Web.ASPxPivotGrid.v9.1.Export.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxScheduler.v9.1">
+      <HintPath>..\..\Web\Bin\DevExpress.Web.ASPxScheduler.v9.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxScheduler.v9.1.Design">
+      <HintPath>..\..\Web\Bin\DevExpress.Web.ASPxScheduler.v9.1.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxSpellChecker.v9.1">
+      <HintPath>..\..\Web\Bin\DevExpress.Web.ASPxSpellChecker.v9.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxTreeList.v9.1">
+      <HintPath>..\..\Web\Bin\DevExpress.Web.ASPxTreeList.v9.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxTreeList.v9.1.Export">
+      <HintPath>..\..\Web\Bin\DevExpress.Web.ASPxTreeList.v9.1.Export.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.v9.1">
+      <HintPath>..\..\Web\Bin\DevExpress.Web.v9.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpo.v9.1">
+      <HintPath>..\..\Web\Bin\DevExpress.Xpo.v9.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v9.1">
+      <HintPath>..\..\Web\Bin\DevExpress.XtraBars.v9.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v9.1.Design">
+      <HintPath>..\..\Web\Bin\DevExpress.XtraBars.v9.1.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v9.1">
+      <HintPath>..\..\Web\Bin\DevExpress.XtraCharts.v9.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v9.1.Design">
+      <HintPath>..\..\Web\Bin\DevExpress.XtraCharts.v9.1.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v9.1.UI">
+      <HintPath>..\..\Web\Bin\DevExpress.XtraCharts.v9.1.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v9.1.Web">
+      <HintPath>..\..\Web\Bin\DevExpress.XtraCharts.v9.1.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v9.1">
+      <HintPath>..\..\Web\Bin\DevExpress.XtraEditors.v9.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v9.1.Design">
+      <HintPath>..\..\Web\Bin\DevExpress.XtraEditors.v9.1.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGauges.v9.1.Core">
+      <HintPath>..\..\Web\Bin\DevExpress.XtraGauges.v9.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGauges.v9.1.Design.Win">
+      <HintPath>..\..\Web\Bin\DevExpress.XtraGauges.v9.1.Design.Win.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGauges.v9.1.Presets">
+      <HintPath>..\..\Web\Bin\DevExpress.XtraGauges.v9.1.Presets.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGauges.v9.1.Win">
+      <HintPath>..\..\Web\Bin\DevExpress.XtraGauges.v9.1.Win.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v9.1">
+      <HintPath>..\..\Web\Bin\DevExpress.XtraGrid.v9.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v9.1.Design">
+      <HintPath>..\..\Web\Bin\DevExpress.XtraGrid.v9.1.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v9.1">
+      <HintPath>..\..\Web\Bin\DevExpress.XtraLayout.v9.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v9.1.Design">
+      <HintPath>..\..\Web\Bin\DevExpress.XtraLayout.v9.1.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v9.1">
+      <HintPath>..\..\Web\Bin\DevExpress.XtraNavBar.v9.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v9.1.Design">
+      <HintPath>..\..\Web\Bin\DevExpress.XtraNavBar.v9.1.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v9.1">
+      <HintPath>..\..\Web\Bin\DevExpress.XtraPivotGrid.v9.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v9.1.Core">
+      <HintPath>..\..\Web\Bin\DevExpress.XtraPivotGrid.v9.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v9.1.Design">
+      <HintPath>..\..\Web\Bin\DevExpress.XtraPivotGrid.v9.1.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v9.1">
+      <HintPath>..\..\Web\Bin\DevExpress.XtraPrinting.v9.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v9.1.Design">
+      <HintPath>..\..\Web\Bin\DevExpress.XtraPrinting.v9.1.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v9.1">
+      <HintPath>..\..\Web\Bin\DevExpress.XtraReports.v9.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v9.1.Design">
+      <HintPath>..\..\Web\Bin\DevExpress.XtraReports.v9.1.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v9.1.Import">
+      <HintPath>..\..\Web\Bin\DevExpress.XtraReports.v9.1.Import.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v9.1.Web">
+      <HintPath>..\..\Web\Bin\DevExpress.XtraReports.v9.1.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v9.1">
+      <HintPath>..\..\Web\Bin\DevExpress.XtraRichEdit.v9.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v9.1.Design">
+      <HintPath>..\..\Web\Bin\DevExpress.XtraRichEdit.v9.1.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v9.1.Extensions">
+      <HintPath>..\..\Web\Bin\DevExpress.XtraRichEdit.v9.1.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v9.1.Printing">
+      <HintPath>..\..\Web\Bin\DevExpress.XtraRichEdit.v9.1.Printing.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v9.1">
+      <HintPath>..\..\Web\Bin\DevExpress.XtraScheduler.v9.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v9.1.Core">
+      <HintPath>..\..\Web\Bin\DevExpress.XtraScheduler.v9.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v9.1.Design">
+      <HintPath>..\..\Web\Bin\DevExpress.XtraScheduler.v9.1.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v9.1.Extensions">
+      <HintPath>..\..\Web\Bin\DevExpress.XtraScheduler.v9.1.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v9.1.iCalendarExchange">
+      <HintPath>..\..\Web\Bin\DevExpress.XtraScheduler.v9.1.iCalendarExchange.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v9.1.OutlookExchange">
+      <HintPath>..\..\Web\Bin\DevExpress.XtraScheduler.v9.1.OutlookExchange.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v9.1.Reporting">
+      <HintPath>..\..\Web\Bin\DevExpress.XtraScheduler.v9.1.Reporting.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v9.1.VCalendarExchange">
+      <HintPath>..\..\Web\Bin\DevExpress.XtraScheduler.v9.1.VCalendarExchange.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraSpellChecker.v9.1">
+      <HintPath>..\..\Web\Bin\DevExpress.XtraSpellChecker.v9.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraSpellChecker.v9.1.Core">
+      <HintPath>..\..\Web\Bin\DevExpress.XtraSpellChecker.v9.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraSpellChecker.v9.1.Design">
+      <HintPath>..\..\Web\Bin\DevExpress.XtraSpellChecker.v9.1.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v9.1">
+      <HintPath>..\..\Web\Bin\DevExpress.XtraTreeList.v9.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v9.1.Design">
+      <HintPath>..\..\Web\Bin\DevExpress.XtraTreeList.v9.1.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraVerticalGrid.v9.1">
+      <HintPath>..\..\Web\Bin\DevExpress.XtraVerticalGrid.v9.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraVerticalGrid.v9.1.Design">
+      <HintPath>..\..\Web\Bin\DevExpress.XtraVerticalGrid.v9.1.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraWizard.v9.1">
+      <HintPath>..\..\Web\Bin\DevExpress.XtraWizard.v9.1.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdapterHelper.cs" />
+    <Compile Include="AuthenUser.cs" />
+    <Compile Include="BudgetApplyTableAdapter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CacheUtil.cs" />
+    <Compile Include="MemberChargeTableAdapter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MemberImportTableAdapter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MemberStaticReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MemberStaticReport.Designer.cs">
+      <DependentUpon>MemberStaticReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MemberStaticTableAdapter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MemberTableAdapter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NotificationTableAdapter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="OrganizeTableAdapter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="OutlayPublishTableAdapter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="OutlayUseTableAdapter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PostTableAdapter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PriseReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PriseReport.Designer.cs">
+      <DependentUpon>PriseReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PriseTableAdapter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="StandardEnumTableAdapter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SystemAdminTableAdapter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SystemLogTableAdapter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TuanFeiReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TuanFeiReport.Designer.cs">
+      <DependentUpon>TuanFeiReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YouthGroupTableAdapter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="YouthMemberReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="YouthMemberReport.Designer.cs">
+      <DependentUpon>YouthMemberReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YouthOneDS.cs">
+      <DependentUpon>YouthOneDS.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="YouthOneDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>YouthOneDS.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="YouthOneDS.xsc">
+      <DependentUpon>YouthOneDS.xsd</DependentUpon>
+    </None>
+    <None Include="YouthOneDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>YouthOneDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="YouthOneDS.xss">
+      <DependentUpon>YouthOneDS.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MemberStaticReport.resx">
+      <DependentUpon>MemberStaticReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PriseReport.resx">
+      <DependentUpon>PriseReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TuanFeiReport.resx">
+      <DependentUpon>TuanFeiReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YouthMemberReport.resx">
+      <DependentUpon>YouthMemberReport.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

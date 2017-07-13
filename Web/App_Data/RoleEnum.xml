@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Roles>
+    <Role Text="系统管理员" Value="Admin" />
+    <Role Text="团委管理员1" Value="TW_Admin" />
+    <Role Text="团委管理员2" Value="TW_Browser" />
+    <Role Text="团委财务管理员" Value="TW_Finance" />
+    <Role Text="团支部管理员" Value="TZB_Admin" />
+</Roles>

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<PostCategory>
+    <Cate Text="职能区域" Value="职能区域" />
+    <Cate Text="密配区域" Value="密配区域" />
+    <Cate Text="生产区域" Value="生产区域" />
+</PostCategory>

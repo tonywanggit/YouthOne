@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<NotificationEnum>
+    <NotificationType Text="生日" Value="生日" />
+    <NotificationType Text="超28" Value="超28" />
+    <NotificationType Text="超35" Value="超35" />
+    <NotificationType Text="转入" Value="转入" />
+</NotificationEnum>

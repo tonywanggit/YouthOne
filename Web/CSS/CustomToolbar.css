@@ -1,0 +1,55 @@
+﻿.dxDisabled_ct
+{
+	color: #808080;
+}
+.dxeReadOnly_ct 
+{
+    
+}
+.dxeBase_ct
+{
+    font-family: Tahoma;
+    font-size: 9pt;
+}
+/* -- Button -- */
+.dxbButton_ct
+{	
+  	color: #000000;    
+	font-size: 9pt;
+	font-family: Tahoma;				    
+	cursor: default;	
+	vertical-align: middle;	 		
+	border: solid 1px #7F7F7F;	
+	background: #E0DFDF url('../Images/CustomToolbar/edtButtonBack.gif') top;
+    background-repeat:repeat-x;
+    padding: 1px 1px 1px 1px;
+}
+.dxbButtonChecked_ct 
+{
+    color: #FFFFFF;
+	background-image: none;
+	background-color: #8D8D8D;
+}
+.dxbButtonPressed_ct 
+{
+  	color: #000000;        
+	background-image: none;
+	background-color: #D5D5D5;
+}
+.dxbButtonHover_ct 
+{
+  	color: #000000;        
+	background: #F2F2F2 url('../Images/CustomToolbar/edtButtonHoverBack.gif') top;
+    background-repeat: repeat-x;
+	border: solid 1px #606060;
+}
+.dxbButton_ct .dxbContentWrapper_ct 
+{    
+    padding: 1px;
+	border: 0px;
+}
+.dxbButton_ct .dxbContentWrapperFocused_ct
+{     
+    padding: 0px;
+	border: dotted 1px black;		
+}

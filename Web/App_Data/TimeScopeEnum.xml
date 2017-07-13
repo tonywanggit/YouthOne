@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TimeScopeEnum>
+    <TimeScope Text="当天" Value="当天" />
+    <TimeScope Text="近一周" Value="近一周" />
+    <TimeScope Text="近一月" Value="近一月" />
+    <TimeScope Text="近半年" Value="近半年" />
+</TimeScopeEnum>

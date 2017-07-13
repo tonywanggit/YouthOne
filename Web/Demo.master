@@ -1,0 +1,249 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Demo.master.cs" Inherits="Demo" %>
+<%@ Register assembly="DevExpress.Web.v9.1, Version=9.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web.ASPxRoundPanel" TagPrefix="dxrp" %>
+<%@ Register assembly="DevExpress.Web.v9.1, Version=9.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web.ASPxMenu" TagPrefix="dxm" %>
+<%@ Register assembly="DevExpress.Web.v9.1, Version=9.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web.ASPxSiteMapControl" TagPrefix="dxsm" %>
+<%@ Register assembly="DevExpress.Web.v9.1, Version=9.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web.ASPxNavBar" TagPrefix="dxnb" %>
+<%@ Register assembly="DevExpress.Web.v9.1, Version=9.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web.ASPxTabControl" TagPrefix="dxtc" %>
+<%@ Register assembly="DevExpress.Web.v9.1, Version=9.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web.ASPxClasses" tagprefix="dxw" %>
+<%@ Register assembly="DevExpress.Web.v9.1, Version=9.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web.ASPxHeadline" TagPrefix="dxhl" %>
+<%@ Register Assembly="DevExpress.Web.ASPxEditors.v9.1, Version=9.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web.ASPxEditors" TagPrefix="dxe" %>
+<%@ Register Assembly="DevExpress.Web.v9.1, Version=9.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web.ASPxPopupControl" TagPrefix="dxpc" %>
+<%@ Register Assembly="DevExpress.Web.v9.1, Version=9.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web.ASPxCallback" TagPrefix="dxcb" %>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head id="Head1" runat="server">
+        <meta http-equiv="X-UA-Compatible" content="IE=7" />
+        <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+        <meta http-equiv="Content-Style-Type" content="text/css" />
+        <asp:ContentPlaceHolder EnableViewState="False" ID="localCssPlaceholder" runat="server"></asp:ContentPlaceHolder>
+        <style type="text/css">
+            td.buttonCell {
+                padding-right: 6px;
+                text-align:right;
+            }
+            
+            #YouthOneLogo
+            {
+            	position: absolute;
+            	top: 10px;
+            	left: 20px;
+            	width: 315px;
+            	height: 70px;
+            	background-image: url("");
+            }
+        </style>
+        <script type="text/javascript">
+            function ChangePassWord() {
+                txtNewPassWord1.SetText("");
+                txtNewPassWord2.SetText("");
+                popChangePassWord.Show();
+            }
+
+            function OnChangePassWordOK() {
+                if (txtOldPassWord.GetIsValid() && txtNewPassWord1.GetIsValid() && txtNewPassWord2.GetIsValid()) {
+                    if (txtNewPassWord1.GetText() != txtNewPassWord2.GetText()) {
+                        alert("两次输入的新密码不一致！");
+                    } else 
+                    {
+                        callbackChangePassword.PerformCallback(txtOldPassWord.GetText() + "-" + txtNewPassWord2.GetText());
+                    }
+                }
+            }
+
+            function OnChangePasswordCallbackComplete(s, e) {
+                alert(e.result);
+
+                if (e.result == "修改密码成功！") {
+                    txtOldPassWord.SetText("");
+                    txtNewPassWord1.SetText("");
+                    txtNewPassWord2.SetText("");
+                }
+                popChangePassWord.Hide();
+            }
+
+            function OnChangePassWordCancel() {
+                popChangePassWord.Hide();
+            }
+
+            //--Tony.2013-03-29.应客户要求增加收起功能
+            function OnNavHeaderClick(s, e) {
+                var expand = e.group.GetExpanded();
+                nbMenu.CollapseAll();
+                e.group.SetExpanded(!expand);
+
+                e.cancel = true;
+            }
+        </script>
+    </head>
+    <body>
+        <div id="YouthOneLogo">
+            <asp:Image ID="imgLogo" runat="server" Width="315" />
+        </div>
+    
+        <form id="form1" runat="server" class="Form">
+         <dxcb:ASPxCallback ID="callbackChangePassword" runat="server" ClientInstanceName="callbackChangePassword">
+            <ClientSideEvents CallbackComplete="OnChangePasswordCallbackComplete" />
+         </dxcb:ASPxCallback>
+
+        <dxpc:ASPxPopupControl ID="popChangePassWord" Modal="true" runat="server" Width="230" Height="200" HeaderText="修改密码"
+            ClientInstanceName="popChangePassWord" PopupHorizontalAlign="WindowCenter" PopupVerticalAlign="WindowCenter">
+            <ContentStyle Paddings-PaddingRight="0"></ContentStyle>
+            <ContentCollection>
+                <dxpc:PopupControlContentControl ID="PopupControlContentControl1" runat="server">
+                    <table cellpadding="3" cellspacing="0">
+                        <tr>
+                            <td class="buttonCell"><dxe:ASPxLabel ID="ASPxLabel7" Text="旧密码:" runat="server" /></td>
+                            <td style="padding-top: 3px">
+                                <dxe:ASPxTextBox ID="txtOldPassWord" runat="server" ClientInstanceName="txtOldPassWord" Password="True">
+                                    <ValidationSettings RequiredField-IsRequired="true" RequiredField-ErrorText="旧密码必须填写!" ErrorDisplayMode="ImageWithTooltip"></ValidationSettings>
+                                </dxe:ASPxTextBox>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="buttonCell"><dxe:ASPxLabel ID="ASPxLabel9" Text="新密码:" runat="server" /></td>
+                            <td style="padding-top: 3px">
+                                <dxe:ASPxTextBox ID="ASPxTextBox1" runat="server" ClientInstanceName="txtNewPassWord1" Password="True">
+                                    <ValidationSettings RequiredField-IsRequired="true" RequiredField-ErrorText="新密码必须填写!" ErrorDisplayMode="ImageWithTooltip"></ValidationSettings>
+                                </dxe:ASPxTextBox>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="buttonCell"><dxe:ASPxLabel ID="ASPxLabel1" Text="新密码:" runat="server" /></td>
+                            <td style="padding-top: 3px"><dxe:ASPxTextBox ID="txtNewPassWord2" runat="server" ClientInstanceName="txtNewPassWord2" Password="True">
+                                    <ValidationSettings RequiredField-IsRequired="true" RequiredField-ErrorText="新密码必须填写!" ErrorDisplayMode="ImageWithTooltip"></ValidationSettings>
+                                </dxe:ASPxTextBox>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="buttonCell" colspan="2" style="padding-right:28px">
+                                <table cellpadding="3" cellspacing="0">
+                                    <tr><td colspan="2" style="height:10px"></td></tr>
+                                    <tr >
+                                        <td><dxe:ASPxButton Text="确定" ID="cmdOK" runat="server" AutoPostBack="false">
+                                                <ClientSideEvents Click="OnChangePassWordOK" />
+                                            </dxe:ASPxButton></td>
+                                        <td><dxe:ASPxButton Text="关闭" ID="cmdCancel" runat="server" AutoPostBack="false" >
+                                            <ClientSideEvents Click="OnChangePassWordCancel" />
+                                        </dxe:ASPxButton></td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </dxpc:PopupControlContentControl>
+            </ContentCollection>
+        </dxpc:ASPxPopupControl> 
+        
+            <table border="0" cellpadding="0" cellspacing="0" class="Main" id="Main">
+                <tr id="Header" runat="server">
+                    <td valign="top" class="Navigation Header" height="100"><dxe:ASPxHyperLink Visible="false" EnableViewState="False" ID="Logotype" runat="server" NavigateUrl="~/Default.aspx" SkinID="Logotype" /></td>
+                    <td align="right" class="HeaderPanel" valign="top">
+                        <table border="0" cellpadding="0" cellspacing="0" id="nav" runat="server"><tr>
+                            <td><dxe:ASPxLabel ID="lblUserName" CssClass="lblSkins" runat="server" Text="选择皮肤:" AssociatedControlID="cbUserName" />
+                            <dxe:ASPxLabel ID="lblSkins" CssClass="lblSkins" runat="server" Text="选择皮肤:" AssociatedControlID="cbSkins" /></td>
+                            <td><div class="Spacer" style="width: 7px;"></div></td>
+                            <td>
+                                <dxe:ASPxComboBox AutoPostBack="True" DataSourceID="xdsThemes" Width="120px" ID="cbSkins" runat="server" EnableViewState="False" ClientInstanceName="cbSkins" OnDataBound="cbSkins_DataBound">
+                                    <ClientSideEvents SelectedIndexChanged="function(s, e) {
+    DXSaveCurrentThemeToCookies(s.GetSelectedItem().value);
+}" />
+                                </dxe:ASPxComboBox>
+                                <asp:XmlDataSource DataFile="~/App_Data/Themes.xml" XPath="//Theme" ID="xdsThemes" runat="server" />
+                            </td>
+                            <td><div class="Spacer" style="width: 20px;"></div></td>
+                            <td>
+                                <dxm:ASPxMenu EnableTheming="False" CssPostFix="Demo" DataSourceID="smdsIconMenu" runat="server" ID="mIcon" AutoSeparators="RootOnly" EnableDefaultAppearance="False" ItemLinkMode="TextOnly" AutoPostBack="False">
+                                    <SeparatorPaddings PaddingLeft="7px" PaddingRight="7px" PaddingTop="3px" PaddingBottom="0px" />
+                                </dxm:ASPxMenu>
+                            </td>
+                        </tr></table>
+                    </td>                    
+                </tr>
+                <tr>
+                    <td valign="top" class="Navigation" style="padding-left: 1px;">
+                    
+                    <dxrp:ASPxRoundPanel runat="server" ID="rpMenu" SkinID="RoundPanelNavigation" Width="100%" ShowHeader="False">
+                        <PanelCollection>
+                            <dxrp:PanelContent runat="server">
+                                <dxnb:ASPxNavBar runat="server" ID="nbMenu" ClientInstanceName="nbMenu" SkinID="NavBarNavigation" Width="190" EncodeHtml="False" EnableViewState="False" AllowSelectItem="False"
+                                    OnItemDataBound="nbMenu_ItemDataBound" OnGroupDataBound="nbMenu_GroupDataBound" OnDataBound="nbMenu_DataBound" AllowExpanding="True" AutoCollapse="False">
+                                        <ClientSideEvents HeaderClick="OnNavHeaderClick"  />
+                                        <ItemTextTemplate>
+                                            <dxhl:ASPxHeadline CssClass="PageStatus" id="hlItem" runat="server" ShowContentAsLink='<%# !Container.Item.Selected %>' NavigateUrl='<%# Eval("NavigateUrl") %>' EnableViewState="False" EnableDefaultAppearance="False" ContentText='<%# Eval("Text") %>' TailPosition="KeepWithLastWord" EnableTheming="False" OnDataBinding="hlItem_DataBinding">
+                                                <ContentStyle LineHeight="160%" />
+                                            </dxhl:ASPxHeadline> 
+                                        </ItemTextTemplate>
+                                        <GroupHeaderTemplate>
+                                            <dxhl:ASPxHeadline CssClass="PageStatus" id="hlItem" runat="server" EnableViewState="False" EnableDefaultAppearance="False" ContentText='<%# Eval("Text") %>' TailPosition="KeepWithLastWord" EnableTheming="False" OnDataBinding="hlGroup_DataBinding">
+                                                <ContentStyle LineHeight="150%" />
+                                            </dxhl:ASPxHeadline>
+                                        </GroupHeaderTemplate>
+                                    </dxnb:ASPxNavBar>
+                                </dxrp:PanelContent>
+                            </PanelCollection>
+                        </dxrp:ASPxRoundPanel>
+                    </td>
+                    <td valign="top" class="Content" id="Content">
+                        <table cellpadding="0" cellspacing="0" border="0" width="100%" runat="server" EnableViewState="False" id="tblTitle">
+                        <tr><td valign="top"><dxe:ASPxImage EnableViewState="False" ID="ImageRPTopLeftCorner" runat="server" SkinID="TopLeftCorner" /></td>
+                            <td valign="middle" class="DetailsPageHeader">
+                                <table cellpadding="0" cellspacing="0" border="0" class="Title"><tr>
+                                    <td style="width: 1%;"><dxe:ASPxImage ID="iTitleImage" runat="server" EnableViewState="False" Width="45px" Height="50px" /></td>
+                                    <td>
+                                        <h1 class="DemoHeader h1Blue"><dxe:ASPxLabel EnableDefaultAppearance="False" EnableTheming="False" ID="lGroupName" runat="server" EnableViewState="False" /></h1>
+                                        <h2 class="DemoHeader h2Gray" EnableViewState="False" runat="server" id="hName">&nbsp;<asp:Literal ID="lName" runat="server" EnableViewState="False"></asp:Literal></h2>
+                                    </td>
+                                </tr></table>                                                
+                            </td>
+                            <td valign="top"><dxe:ASPxImage EnableViewState="False" ID="ImageRPTopRightCorner" runat="server" SkinID="TopRightCorner" /></td>
+                        </tr></table>
+                        <table runat="server" id="tblHeader" border="0" cellpadding="0" cellspacing="0" width="100%" EnableViewState="False">
+                            <tr>
+                                <td class="DetailsPageLeftEdgeHeader"><div class="Spacer DetailsPageEdge"></div></td>
+                                <td class="DetailsPageHeaderBottom"><div class="Spacer"></div></td>
+                                <td class="DetailsPageRightEdgeHeader"><div class="Spacer DetailsPageEdge"></div></td>
+                            </tr>
+                        </table>
+                        <table cellpadding="0" cellspacing="0" border="0" width="100%" runat="server" id="tblContent"><tr>
+                            <td valign="top">
+                                <table border="0" cellpadding="0" cellspacing="0" width="100%"><tr>
+                                    <td class="DetailsPageLeftEdge"><div class="Spacer DetailsPageEdge"></div></td>
+                                    <td valign="top" class="DetailsPageContent">
+                                        <asp:Literal ID="lGeneralTerms" EnableViewState="False" Visible="False" runat="server" />
+                                        <div class="ContentMargin"><asp:ContentPlaceHolder id="phContent" runat="server"></asp:ContentPlaceHolder></div>
+                                    </td>
+                                    <td class="DetailsPageRightEdge"><div class="Spacer DetailsPageEdge"></div></td>
+                                </tr></table>
+                            </td>
+                        </tr></table>
+                        <table runat="server" id="tblFooter" border="0" cellpadding="0" cellspacing="0" width="100%" EnableViewState="False"><tr>
+                            <td><dxe:ASPxImage EnableViewState="False" ID="ImageRPBottomLeftCorner" runat="server" SkinID="BottomLeftCorner" /></td>
+                            <td class="DetailsPageFooter"><div class="Spacer"></div></td>
+                            <td><dxe:ASPxImage EnableViewState="False" ID="ImageRPBottomRightCorner" runat="server" SkinID="BottomRightCorner" /></td>
+                        </tr></table>
+                        <asp:ContentPlaceHolder id="phOnceContent" runat="server"></asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+                <tr id="Spacer">
+                    <td><div id="SpacerDiv" class="Spacer"></div></td>
+                    <td id="divSpacer"><div class="Spacer" style="width: 719px;"></div></td>
+                </tr>
+                <tr id="Footer">
+                    <td valign="top"><div class="Spacer" style="width: 0px; height: 0px;"></div></td>
+                    <td valign="top" class="Footer" runat="server" id="tdFooter" EnableViewState="False">
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%"><tr>
+                            <td></td>
+                            <td align="right">
+                                <table border="0" cellpadding="0" cellspacing="0"><tr>
+                                    <td align="right"><dxe:ASPxImage Visible="false" ID="ImageCopyright" runat="server" EnableViewState="False" SkinID="Copyright" /></td>
+                                </tr></table>        
+                            </td>
+                        </tr></table>                
+                    </td>
+                </tr>
+            </table>
+            <dxsm:ASPxSiteMapDataSource ID="smdsIconMenu" runat="server" SiteMapProvider="FooterMenuSiteMapProvider" />
+        </form>
+    </body>
+</html>

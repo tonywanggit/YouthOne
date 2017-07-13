@@ -1,0 +1,11 @@
+E:\Tony\StudyCode\CsPractice\YouthOne\SRC\Component\YouthOne.Component\bin\Release\YouthOne.Component.dll.config
+E:\Tony\StudyCode\CsPractice\YouthOne\SRC\Component\YouthOne.Component\bin\Release\YouthOne.Component.dll
+E:\Tony\StudyCode\CsPractice\YouthOne\SRC\Component\YouthOne.Component\bin\Release\YouthOne.Component.pdb
+E:\Tony\StudyCode\CsPractice\YouthOne\SRC\Component\YouthOne.Component\obj\Release\ResolveAssemblyReference.cache
+E:\Tony\StudyCode\CsPractice\YouthOne\SRC\Component\YouthOne.Component\obj\Release\YouthOne.Component.MemberStaticReport.resources
+E:\Tony\StudyCode\CsPractice\YouthOne\SRC\Component\YouthOne.Component\obj\Release\YouthOne.Component.PriseReport.resources
+E:\Tony\StudyCode\CsPractice\YouthOne\SRC\Component\YouthOne.Component\obj\Release\YouthOne.Component.TuanFeiReport.resources
+E:\Tony\StudyCode\CsPractice\YouthOne\SRC\Component\YouthOne.Component\obj\Release\YouthOne.Component.YouthMemberReport.resources
+E:\Tony\StudyCode\CsPractice\YouthOne\SRC\Component\YouthOne.Component\obj\Release\YouthOne.Component.csproj.GenerateResource.Cache
+E:\Tony\StudyCode\CsPractice\YouthOne\SRC\Component\YouthOne.Component\obj\Release\YouthOne.Component.dll
+E:\Tony\StudyCode\CsPractice\YouthOne\SRC\Component\YouthOne.Component\obj\Release\YouthOne.Component.pdb

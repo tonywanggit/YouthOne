@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "YouthOne", "http://localhost/YouthOne", "{B899C6FF-B839-4558-B544-40EC4F426F4D}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "false"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv3.5"
+		ProjectReferences = "{187B74AD-0BB0-41DD-86C9-1C5272AF32B4}|YouthOne.Component.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/BIN"
+		Debug.AspNetCompiler.PhysicalPath = "..\Web\"
+		Debug.AspNetCompiler.TargetPath = "..\..\BIN\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "true"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/BIN"
+		Release.AspNetCompiler.PhysicalPath = "..\Web\"
+		Release.AspNetCompiler.TargetPath = "..\..\BIN\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "true"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "..\Web\"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YouthOne.Component", "..\Component\YouthOne.Component\YouthOne.Component.csproj", "{187B74AD-0BB0-41DD-86C9-1C5272AF32B4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B899C6FF-B839-4558-B544-40EC4F426F4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B899C6FF-B839-4558-B544-40EC4F426F4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B899C6FF-B839-4558-B544-40EC4F426F4D}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{B899C6FF-B839-4558-B544-40EC4F426F4D}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{187B74AD-0BB0-41DD-86C9-1C5272AF32B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{187B74AD-0BB0-41DD-86C9-1C5272AF32B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{187B74AD-0BB0-41DD-86C9-1C5272AF32B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{187B74AD-0BB0-41DD-86C9-1C5272AF32B4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

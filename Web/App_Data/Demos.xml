@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Demos Name="ASPxGridView" ColumnCount="3" Title="团建工作信息平台" TitleFormatString="{2}">
+   
+    <DemoGroup IsUpdated="false" IsNew="true" Text="团委概况" ImageWidth="76px" ImageHeight="76px" BeginCategory="true">
+        <Demo Text="最新动态" NavigateUrl="~/Default.aspx" Title="团建工作信息平台 - 最新动态" />
+    </DemoGroup>
+
+    <DemoGroup Text="基础信息" ImageUrl="~/Images/TitleImages/SiteMap.png" ImageWidth="76px" ImageHeight="76px">
+        <Demo Text="团组织管理" NavigateUrl="~/BaseInfo/YouthGroup.aspx" Title="团建工作信息平台 - 团组织管理" />
+        <Demo Text="行政机构管理" NavigateUrl="~/BaseInfo/Organize.aspx" Title="团建工作信息平台 - 行政机构管理" />
+        <Demo Text="岗位管理" NavigateUrl="~/BaseInfo/Post.aspx" Title="团建工作信息平台 - 岗位管理" />
+        <Demo Text="标准枚举管理" NavigateUrl="~/BaseInfo/StandardEnum.aspx" Title="团建工作信息平台 - 标准枚举管理" />
+    </DemoGroup>
+
+    <DemoGroup IsNew="fasle" Text="人员管理"  ImageUrl="~/Images/TitleImages/Scheduler.png" ImageWidth="76px" ImageHeight="76px">
+    </DemoGroup>
+
+    <DemoGroup Text="经费管理" ImageUrl="~/Images/TitleImages/GridView.png" ImageWidth="76px" ImageHeight="76px"  BeginCategory="true">
+        <Demo Text="年度经费下发" NavigateUrl="~/Outlay/OutlayPublish.aspx" Title="团建工作信息平台 - 年度经费下发" />
+        <Demo Text="预算申报" NavigateUrl="~/Outlay/BudgetApply.aspx" Title="团建工作信息平台 - 预算申报" />
+        <Demo Text="经费使用明细" NavigateUrl="~/Outlay/OutlayUse.aspx" Title="团建工作信息平台 - 经费使用明细" />
+        <Demo Text="经费结余查询" NavigateUrl="~/Outlay/OutlaySum.aspx" Title="团建工作信息平台 - 经费结余查询" />
+    </DemoGroup>
+
+    <DemoGroup Text="报表管理" ImageUrl="~/Images/TitleImages/PivotGrid.png" ImageWidth="76px" ImageHeight="76px">
+        <Demo Text="青年人事信息表" NavigateUrl="~/Report/YouthInfo.aspx" Title="团建工作信息平台 - 青年人事信息表" />
+        <Demo Text="青年信息统计表" NavigateUrl="~/Report/MemberStatic.aspx" Title="团建工作信息平台 - 青年信息统计表" />
+        <Demo Text="团费收缴报告单" NavigateUrl="~/Report/MemberCharge.aspx" Title="团建工作信息平台 - 团费收缴报告单" />
+    </DemoGroup>
+
+    <DemoGroup Text="系统管理" ImageUrl="~/Images/TitleImages/Utilities.png" ImageWidth="76px" ImageHeight="76px">
+        <Demo Text="帐户管理" NavigateUrl="~/Security/SystemAdmin.aspx" Title="团建工作信息平台 - 帐户管理" />
+        <Demo Text="日志审计" NavigateUrl="~/Security/SystemLog.aspx" Title="团建工作信息平台 - 日志审计" />
+        <Demo Text="批量导入团员" NavigateUrl="~/Member/MemberImport.aspx" Title="团建工作信息平台 - 批量导入团员" />
+    </DemoGroup>
+</Demos>

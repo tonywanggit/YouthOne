@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LogTypeEnum>
+    <LogType Text="所有日志" Value="所有日志" />
+    <LogType Text="系统日志" Value="系统日志" />
+    <LogType Text="操作日志" Value="操作日志" />
+</LogTypeEnum>
