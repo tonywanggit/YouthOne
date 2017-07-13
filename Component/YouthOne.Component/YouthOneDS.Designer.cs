@@ -7555,25 +7555,25 @@ namespace YouthOne.Component {
                 base.Columns.Add(this.columnSP_REASON);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnOID}, true));
-                this.columnOID.AllowDBNull = true;
-                this.columnOID.Unique = false;
+                this.columnOID.AllowDBNull = false;
+                this.columnOID.Unique = true;
                 this.columnOID.MaxLength = 50;
                 this.columnYG_OID.AllowDBNull = false;
                 this.columnYG_OID.MaxLength = 50;
                 this.columnCRE_DATE.AllowDBNull = false;
                 this.columnBA_NUM.AllowDBNull = false;
                 this.columnBA_DESC.AllowDBNull = false;
-                this.columnBA_DESC.MaxLength = 50;
+                this.columnBA_DESC.MaxLength = 200;
                 this.columnBA_STATUS.AllowDBNull = false;
                 this.columnBA_STATUS.MaxLength = 50;
                 this.columnBA_ADMIN.AllowDBNull = false;
                 this.columnBA_ADMIN.MaxLength = 50;
-                this.columnSP_ADMIN.AllowDBNull = true;
+                this.columnSP_ADMIN.AllowDBNull = false;
                 this.columnSP_ADMIN.MaxLength = 50;
                 this.columnSP_DATE.AllowDBNull = false;
                 this.columnYJ_MONTH.AllowDBNull = false;
                 this.columnYJ_MONTH.MaxLength = 5;
-                this.columnSP_REASON.AllowDBNull = true;
+                this.columnSP_REASON.AllowDBNull = false;
                 this.columnSP_REASON.MaxLength = 500;
             }
             
